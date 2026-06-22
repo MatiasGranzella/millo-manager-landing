@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" fill="none">
+  <!-- PLACEHOLDER: player legend card -->
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2D17A"/>
+      <stop offset="0.5" stop-color="#E6B94E"/>
+      <stop offset="1" stop-color="#B8882E"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2012"/>
+      <stop offset="1" stop-color="#15140f"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="420" rx="22" fill="url(#gold)"/>
+  <rect x="10" y="10" width="280" height="400" rx="16" fill="url(#inner)"/>
+  <text x="34" y="74" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="58" fill="#E6B94E">96</text>
+  <text x="36" y="100" font-family="monospace" font-size="12" fill="#C9CED4">DEL · LEYENDA</text>
+  <circle cx="150" cy="200" r="64" fill="#E1322A" opacity="0.25"/>
+  <circle cx="150" cy="200" r="64" stroke="#E6B94E" stroke-width="2" fill="none"/>
+  <path d="M150 168a18 18 0 1 1 0 36 18 18 0 0 1 0-36Zm0 44c20 0 36 12 36 26v6h-72v-6c0-14 16-26 36-26Z" fill="#E6B94E" opacity="0.9"/>
+  <text x="150" y="300" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="30" fill="#fff">EL IDOLO</text>
+  <g font-family="monospace" font-size="13" fill="#fff">
+    <text x="44" y="344">RIT 95</text>
+    <text x="44" y="366">TIR 92</text>
+    <text x="44" y="388">PAS 90</text>
+    <text x="196" y="344">REG 94</text>
+    <text x="196" y="366">DEF 38</text>
+    <text x="196" y="388">FIS 80</text>
+  </g>
+</svg>

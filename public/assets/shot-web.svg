@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" fill="none">
+  <!-- PLACEHOLDER: web app screenshot (pitch + XI) -->
+  <defs>
+    <linearGradient id="pitch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16302a"/>
+      <stop offset="1" stop-color="#0e1f1b"/>
+    </linearGradient>
+    <linearGradient id="acc2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E1322A"/>
+      <stop offset="1" stop-color="#7E1413"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" fill="#0E0F12"/>
+  <rect x="24" y="24" width="360" height="332" rx="16" fill="url(#pitch)"/>
+  <rect x="24" y="24" width="360" height="332" rx="16" stroke="#ffffff" stroke-opacity="0.12" fill="none"/>
+  <line x1="24" y1="190" x2="384" y2="190" stroke="#fff" stroke-opacity="0.18"/>
+  <circle cx="204" cy="190" r="44" stroke="#fff" stroke-opacity="0.18" fill="none"/>
+  <g fill="url(#acc2)">
+    <circle cx="204" cy="320" r="16"/>
+    <circle cx="100" cy="250" r="16"/><circle cx="170" cy="250" r="16"/><circle cx="238" cy="250" r="16"/><circle cx="308" cy="250" r="16"/>
+    <circle cx="120" cy="150" r="16"/><circle cx="204" cy="150" r="16"/><circle cx="288" cy="150" r="16"/>
+    <circle cx="150" cy="70" r="16"/><circle cx="258" cy="70" r="16"/>
+  </g>
+  <circle cx="204" cy="50" r="16" fill="#E6B94E"/>
+  <rect x="408" y="24" width="168" height="40" rx="10" fill="#16171B"/>
+  <rect x="424" y="38" width="90" height="12" rx="6" fill="#F4F4F5"/>
+  <rect x="408" y="80" width="168" height="92" rx="12" fill="#16171B"/>
+  <rect x="424" y="98" width="60" height="60" rx="8" fill="url(#acc2)"/>
+  <rect x="496" y="100" width="64" height="10" rx="5" fill="#F4F4F5"/>
+  <rect x="496" y="120" width="44" height="9" rx="4.5" fill="#7C828D"/>
+  <rect x="496" y="140" width="54" height="9" rx="4.5" fill="#7C828D"/>
+  <rect x="408" y="188" width="168" height="92" rx="12" fill="#16171B"/>
+  <rect x="424" y="206" width="60" height="60" rx="8" fill="#E6B94E"/>
+  <rect x="496" y="208" width="64" height="10" rx="5" fill="#F4F4F5"/>
+  <rect x="496" y="228" width="44" height="9" rx="4.5" fill="#7C828D"/>
+  <rect x="408" y="300" width="168" height="44" rx="12" fill="url(#acc2)"/>
+  <rect x="460" y="318" width="64" height="10" rx="5" fill="#fff"/>
+</svg>

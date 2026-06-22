@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+/* ===== Brand + theme tokens (ported from the design mockup) ===== */
+:root,
+[data-theme="dark"] {
+  --bg: #0e0f12;
+  --bg-soft: #121317;
+  --surface: #16171b;
+  --surface-2: #1c1e23;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text: #f4f4f5;
+  --text-2: #9aa0a8;
+  --muted: #7c828d;
+  --nav: rgba(14, 15, 18, 0.78);
+  --hairline: rgba(255, 255, 255, 0.06);
+  --chip: rgba(255, 255, 255, 0.05);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] {
+  --bg: #f4f3f0;
+  --bg-soft: #eeede8;
+  --surface: #ffffff;
+  --surface-2: #f4f3f0;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-strong: rgba(0, 0, 0, 0.12);
+  --text: #16171b;
+  --text-2: #565b66;
+  --muted: #8c9098;
+  --nav: rgba(244, 243, 240, 0.82);
+  --hairline: rgba(0, 0, 0, 0.06);
+  --chip: rgba(0, 0, 0, 0.04);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+}
+
+/* Fixed brand accents (do not change with theme) */
+:root {
+  --river: #e1322a;
+  --river-bright: #f0463d;
+  --gold: #e6b94e;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border-soft: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-muted: var(--muted);
+  --color-chip: var(--chip);
+  --color-hairline: var(--hairline);
+  --color-river: var(--river);
+  --color-river-bright: var(--river-bright);
+  --color-gold: var(--gold);
+
+  --font-sans: var(--font-barlow);
+  --font-display: var(--font-barlow-condensed);
+  --font-mono: var(--font-jetbrains);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--river);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+/* Smooth color crossfade on theme switch */
+.theme-transition,
+.theme-transition * {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+@keyframes milloFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes milloPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.animate-float {
+  animation: milloFloat 6s ease-in-out infinite;
+}

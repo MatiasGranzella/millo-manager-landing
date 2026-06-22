@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Placeholder Millo mark: stylized "M" + River sash -->
+  <path d="M14 78V22h13l13 26 13-26h13v56H66V46L52 72h-4L34 46v32H14Z" fill="#fff"/>
+  <rect x="78" y="14" width="9" height="78" rx="4.5" transform="rotate(20 82.5 53)" fill="#fff" opacity="0.85"/>
+</svg>

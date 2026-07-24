@@ -26,11 +26,17 @@ export function WaitlistForm() {
     setStatus("loading");
     setMessage("");
 
-    // TODO: persistir el email cuando definamos backend.
-    // Reemplazar esta simulación por:
-    //   await fetch("/api/waitlist", { method: "POST", body: JSON.stringify({ email: value }) })
-    // y crear app/api/waitlist/route.ts con el storage elegido (Supabase, Resend, etc.).
-    await new Promise((resolve) => setTimeout(resolve, 600));
+    const res = await fetch("/api/waitlist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: value }),
+    }).catch(() => null);
+
+    if (!res || !res.ok) {
+      setStatus("error");
+      setMessage("No pudimos anotarte. Probá de nuevo en un rato.");
+      return;
+    }
 
     setStatus("success");
     setMessage("¡Listo! Te avisamos apenas abra Millo.");

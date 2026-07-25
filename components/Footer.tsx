@@ -25,13 +25,8 @@ export function Footer({ home = true }: { home?: boolean }) {
             height={1024}
             className="h-11 w-auto object-contain"
           />
-          <div>
-            <div className="text-lg leading-none font-extrabold text-text">
-              Millo <span className="text-river">Manager</span>
-            </div>
-            <div className="mt-[3px] font-mono text-[10px] tracking-[0.12em] text-muted">
-              TODO RIVER, SIEMPRE
-            </div>
+          <div className="text-lg leading-none font-extrabold text-text">
+            Millo <span className="text-river">Manager</span>
           </div>
         </Link>
         <nav className="flex flex-wrap items-center gap-[22px]">

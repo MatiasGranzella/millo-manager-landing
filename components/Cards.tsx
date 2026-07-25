@@ -1,17 +1,18 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { RarityCarousel } from "@/components/game/RarityCarousel";
-import { getRarityShowcase, getAllIdols } from "@/lib/game/players";
+import { getRarityShowcase } from "@/lib/game/players";
 import { RARITY, type Rarity } from "@/lib/design/rarity";
 
 const RARITY_TIERS: Rarity[] = ["leyenda", "platino", "oro", "plata", "bronce"];
 
 export function Cards() {
   const showcase = getRarityShowcase();
-  const total = getAllIdols().length;
 
+  // 466 jugadores con carta en el catálogo completo del juego (repo millo,
+  // data/players/lahistoriariver.json) — acá solo viven los 86 curados con arte
   const stats = [
-    { value: `${total}`, label: "jugadores", gold: true },
+    { value: "+460", label: "cartas", gold: true },
     { value: "6", label: "atributos por carta", gold: false },
     { value: "5", label: "rarezas", gold: false },
   ];
@@ -33,7 +34,7 @@ export function Cards() {
 
         <div className="min-w-[320px] flex-1">
           <div className="mb-3.5 font-mono text-[11px] tracking-[0.16em] text-gold">
-            ★ ULTIMATE TEAM
+            ★ JUGADORES DE TODAS LAS ÉPOCAS
           </div>
           <h2 className="m-0 font-display text-[40px] leading-[0.96] font-extrabold uppercase sm:text-[48px]">
             Coleccioná a las

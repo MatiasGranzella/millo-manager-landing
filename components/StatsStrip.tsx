@@ -1,8 +1,7 @@
-import { getAllIdols } from "@/lib/game/players";
-
 export function StatsStrip() {
+  // 466 jugadores con carta en el catálogo completo del juego (repo millo)
   const stats = [
-    { value: `${getAllIdols().length}`, label: "jugadores en cartas", accent: false },
+    { value: "+460", label: "cartas para coleccionar", accent: false },
     { value: "8", label: "competiciones", accent: false },
     { value: "Pronto", label: "acceso anticipado", accent: true },
   ];

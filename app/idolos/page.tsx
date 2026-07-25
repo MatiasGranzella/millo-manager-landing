@@ -48,7 +48,7 @@ export default function IdolosPage() {
       />
       <main className="mx-auto max-w-[1200px] px-8 pt-14 pb-6">
         <div className="mb-2 font-mono text-[11px] tracking-[0.16em] text-gold">
-          ★ ULTIMATE TEAM · {idols.length} CARTAS
+          ★ {idols.length} ÍDOLOS DE TODAS LAS ÉPOCAS
         </div>
         <h1 className="m-0 max-w-[760px] font-display text-[40px] leading-[0.98] font-extrabold uppercase text-text sm:text-[52px]">
           Los ídolos de River, hechos carta

@@ -12,7 +12,7 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#e1322a",
     lang: "es-AR",
     icons: [
-      { src: "/icon.svg", type: "image/svg+xml", sizes: "any" },
+      { src: "/icon.png", type: "image/png", sizes: "512x512" },
       { src: "/brand/millo-logo-transparent.png", type: "image/png", sizes: "1024x1024" },
     ],
   };

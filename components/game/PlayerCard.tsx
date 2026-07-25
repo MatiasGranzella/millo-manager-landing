@@ -10,12 +10,12 @@ import { Flag } from "@/components/game/Flag";
  * (o placeholder rayado como en la app) y grilla de 6 atributos reales.
  */
 
-// Color de la barra/valor de un atributo según su nivel (escala del diseño).
+// Color del valor de un atributo según su nivel. A diferencia del juego, acá
+// no se marcan en rojo los valores bajos: en la landing la carta es vidriera.
 function statColor(v: number): string {
   if (v >= 90) return "#b8882e";
   if (v >= 80) return "#3a3e47";
-  if (v >= 60) return "#565b66";
-  return "#e14b3f";
+  return "#565b66";
 }
 
 function yr(n: number): string {

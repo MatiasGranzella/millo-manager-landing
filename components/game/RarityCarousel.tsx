@@ -27,13 +27,14 @@ export function RarityCarousel({ idols }: { idols: Idol[] }) {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      {/* la carta (crossfade por rareza) */}
-      <div className="relative h-[420px] w-[300px]">
+      {/* la carta (crossfade por rareza); grid apilado para que el alto sea el
+          de la carta más alta y el conjunto quede bien centrado en la sección */}
+      <div className="grid w-[300px]">
         {idols.map((idol, idx) => (
           <div
             key={idol.slug}
             aria-hidden={idx !== i}
-            className="absolute inset-0 transition-opacity duration-500"
+            className="col-start-1 row-start-1 transition-opacity duration-500"
             style={{ opacity: idx === i ? 1 : 0 }}
           >
             <PlayerCard idol={idol} />

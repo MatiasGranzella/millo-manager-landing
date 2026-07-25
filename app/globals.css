@@ -1,24 +1,8 @@
 @import "tailwindcss";
 
-/* ===== Brand + theme tokens (ported from the design mockup) ===== */
-:root,
-[data-theme="dark"] {
-  --bg: #0e0f12;
-  --bg-soft: #121317;
-  --surface: #16171b;
-  --surface-2: #1c1e23;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
-  --text: #f4f4f5;
-  --text-2: #9aa0a8;
-  --muted: #7c828d;
-  --nav: rgba(14, 15, 18, 0.78);
-  --hairline: rgba(255, 255, 255, 0.06);
-  --chip: rgba(255, 255, 255, 0.05);
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
-}
-
-[data-theme="light"] {
+/* ===== Brand + theme tokens (ported from the design mockup) =====
+   El sitio es solo light; las secciones oscuras usan colores propios. */
+:root {
   --bg: #f4f3f0;
   --bg-soft: #eeede8;
   --surface: #ffffff;
@@ -99,18 +83,11 @@ body {
   color: #fff;
 }
 
-a {
-  color: inherit;
-}
-
-/* Smooth color crossfade on theme switch */
-.theme-transition,
-.theme-transition * {
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease;
+/* En @layer base para que las utilities (text-white, etc.) le ganen en cascada */
+@layer base {
+  a {
+    color: inherit;
+  }
 }
 
 @keyframes milloFloat {

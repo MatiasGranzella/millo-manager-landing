@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow, Barlow_Condensed, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import {
   SITE_URL,
   SITE_NAME,
@@ -79,10 +78,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0e0f12" },
-    { media: "(prefers-color-scheme: light)", color: "#f4f3f0" },
-  ],
+  themeColor: "#f4f3f0",
 };
 
 // JSON-LD: identidad de marca (Organization) + sitio (WebSite). Datos estáticos.
@@ -114,7 +110,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${barlow.variable} ${barlowCondensed.variable} ${jetbrainsMono.variable} antialiased`}
     >
-      <body className="theme-transition min-h-screen">
+      <body className="min-h-screen">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
@@ -123,14 +119,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
-        <ThemeProvider
-          attribute="data-theme"
-          defaultTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange={false}
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

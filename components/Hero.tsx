@@ -36,18 +36,6 @@ export function Hero() {
               Ver cómo se juega
             </a>
           </div>
-          <div className="mt-[30px] flex items-center gap-3">
-            <span className="flex">
-              <span className="h-8 w-8 rounded-full border-2 border-bg bg-gradient-to-br from-river to-[#7E1413]" />
-              <span className="-ml-[11px] h-8 w-8 rounded-full border-2 border-bg bg-gradient-to-br from-[#3A3E47] to-[#1C1E23]" />
-              <span className="-ml-[11px] h-8 w-8 rounded-full border-2 border-bg bg-gradient-to-br from-gold to-[#B8882E]" />
-              <span className="-ml-[11px] h-8 w-8 rounded-full border-2 border-bg bg-gradient-to-br from-[#C9CED4] to-[#8E949C]" />
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-sm text-text-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#2FA968] shadow-[0_0_0_3px_rgba(47,169,104,0.2)]" />
-              <b className="text-text">+2.300 hinchas</b> ya en la lista
-            </span>
-          </div>
         </div>
 
         <div className="relative mx-auto flex-none">

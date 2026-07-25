@@ -45,7 +45,7 @@ export default function CartasDeRiverPage() {
           <div className="flex flex-wrap items-center gap-14">
             <div className="min-w-[320px] flex-1">
               <div className="mb-3 font-mono text-[11px] tracking-[0.16em] text-gold">
-                ★ ULTIMATE TEAM · {total} CARTAS
+                ★ +460 CARTAS DE JUGADORES
               </div>
               <h1 className="m-0 font-display text-[44px] leading-[0.95] font-extrabold uppercase text-text sm:text-[56px]">
                 Las cartas de
@@ -99,7 +99,7 @@ export default function CartasDeRiverPage() {
               Cartas destacadas
             </h2>
             <Link href="/idolos" className="text-[15px] font-semibold text-river no-underline">
-              Ver las {total} →
+              Ver los {total} ídolos →
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">

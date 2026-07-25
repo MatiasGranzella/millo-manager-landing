@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swords } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
 
 /**
  * Header del sitio. En la home (`home`) los links de sección son anclas locales
@@ -57,7 +56,6 @@ export function Nav({ home = true }: { home?: boolean }) {
         </nav>
 
         <div className="ml-auto flex items-center gap-3">
-          <ThemeToggle />
           <a
             href={`${p}#waitlist`}
             className="inline-flex cursor-pointer items-center gap-[7px] rounded-xl border-none bg-river px-5 py-3 text-sm font-bold text-white no-underline shadow-[0_6px_16px_rgba(225,50,42,0.32)] transition-colors hover:bg-river-bright"

@@ -13,10 +13,10 @@ export function CtaBanner({
   subtitle?: string;
 }) {
   return (
-    <section className="mx-auto max-w-[1200px] px-8 py-16">
-      <div className="relative overflow-hidden rounded-[24px] border border-border-soft bg-[radial-gradient(120%_140%_at_80%_-20%,#2a2012,#15140f_55%,#0e0f12)] px-8 py-12 text-center text-white">
+    <section className="mx-auto max-w-[1200px] px-4 py-12 sm:px-8 sm:py-16">
+      <div className="relative overflow-hidden rounded-[24px] border border-border-soft bg-[radial-gradient(120%_140%_at_80%_-20%,#2a2012,#15140f_55%,#0e0f12)] px-5 py-10 text-center text-white sm:px-8 sm:py-12">
         <span className="millo-band -top-10 right-[80px] h-[420px] w-6" />
-        <h2 className="relative m-0 font-display text-[32px] font-extrabold uppercase leading-[0.95] sm:text-[40px]">
+        <h2 className="relative m-0 font-display text-[28px] font-extrabold uppercase leading-[0.98] sm:text-[40px] sm:leading-[0.95]">
           {title}
         </h2>
         <p className="relative mx-auto mt-3 max-w-[520px] text-[16px] leading-relaxed text-[#c9ced4]">

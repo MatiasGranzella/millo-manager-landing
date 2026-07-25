@@ -55,19 +55,22 @@ const faqJsonLd = {
 
 export function Faq() {
   return (
-    <section id="faq" className="mx-auto max-w-[860px] px-8 pt-[84px] pb-4">
+    <section
+      id="faq"
+      className="mx-auto max-w-[860px] px-5 pt-16 pb-4 sm:px-8 sm:pt-[84px]"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <div className="mb-3.5 text-center font-mono text-[11px] tracking-[0.16em] text-river">
+      <div className="mb-3.5 text-center font-mono text-[10px] tracking-[0.16em] text-river sm:text-[11px]">
         PREGUNTAS FRECUENTES
       </div>
-      <h2 className="m-0 text-center font-display text-[38px] leading-none font-extrabold uppercase text-text sm:text-[46px]">
+      <h2 className="m-0 text-center font-display text-[32px] leading-[1.02] font-extrabold uppercase text-text sm:text-[46px] sm:leading-none">
         Todo lo que querés saber
       </h2>
 
-      <div className="mt-10 flex flex-col gap-3">
+      <div className="mt-8 flex flex-col gap-3 sm:mt-10">
         {FAQS.map((f) => (
           <details
             key={f.q}

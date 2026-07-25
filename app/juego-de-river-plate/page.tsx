@@ -66,7 +66,7 @@ export default function JuegoDeRiverPage() {
 
       <main>
         {/* hero */}
-        <section className="mx-auto max-w-[1200px] px-8 pt-16 pb-6">
+        <section className="mx-auto max-w-[1200px] px-5 sm:px-8 pt-16 pb-6">
           <div className="flex flex-wrap items-center gap-14">
             <div className="min-w-[320px] flex-1">
               <div className="mb-3 font-mono text-[11px] tracking-[0.16em] text-river">
@@ -104,7 +104,7 @@ export default function JuegoDeRiverPage() {
         </section>
 
         {/* features */}
-        <section className="mx-auto max-w-[1200px] px-8 py-14">
+        <section className="mx-auto max-w-[1200px] px-5 sm:px-8 py-14">
           <div className="grid gap-6 md:grid-cols-3">
             {features.map((f) => (
               <div key={f.title} className="rounded-[18px] border border-border-soft bg-surface p-6">
@@ -121,7 +121,7 @@ export default function JuegoDeRiverPage() {
         </section>
 
         {/* simulación de partido */}
-        <section className="mx-auto max-w-[1200px] px-8 py-10">
+        <section className="mx-auto max-w-[1200px] px-5 sm:px-8 py-10">
           <div className="flex flex-wrap items-center gap-14">
             <div className="min-w-[320px] flex-1">
               <div className="mb-3 font-mono text-[11px] tracking-[0.16em] text-river">

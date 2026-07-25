@@ -16,7 +16,7 @@ export function Footer({ home = true }: { home?: boolean }) {
 
   return (
     <footer className="border-t border-hairline bg-bg-soft">
-      <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-6 px-8 py-10">
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-5 px-5 py-10 text-center sm:px-8 md:flex-row md:flex-wrap md:justify-between md:gap-6 md:text-left">
         <Link href="/" className="flex items-center gap-[11px] no-underline">
           <Image
             src="/brand/millo-logo-transparent.png"
@@ -29,7 +29,7 @@ export function Footer({ home = true }: { home?: boolean }) {
             Millo <span className="text-river">Manager</span>
           </div>
         </Link>
-        <nav className="flex flex-wrap items-center gap-[22px]">
+        <nav className="flex flex-wrap items-center justify-center gap-x-[22px] gap-y-2">
           {links.map((l) =>
             l.route ? (
               <Link

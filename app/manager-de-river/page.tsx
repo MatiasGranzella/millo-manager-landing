@@ -62,7 +62,7 @@ export default function ManagerDeRiverPage() {
       />
 
       <main>
-        <section className="mx-auto max-w-[1200px] px-8 pt-16 pb-6">
+        <section className="mx-auto max-w-[1200px] px-5 sm:px-8 pt-16 pb-6">
           <div className="flex flex-wrap items-center gap-14">
             <div className="min-w-[320px] flex-1">
               <div className="mb-3 font-mono text-[11px] tracking-[0.16em] text-river">
@@ -100,7 +100,7 @@ export default function ManagerDeRiverPage() {
         </section>
 
         {/* pasos */}
-        <section className="mx-auto max-w-[1200px] px-8 py-14">
+        <section className="mx-auto max-w-[1200px] px-5 sm:px-8 py-14">
           <div className="grid gap-6 md:grid-cols-3">
             {steps.map((s) => (
               <div key={s.n} className="rounded-[18px] border border-border-soft bg-surface p-6">
@@ -117,7 +117,7 @@ export default function ManagerDeRiverPage() {
         </section>
 
         {/* partido en vivo */}
-        <section className="mx-auto max-w-[1200px] px-8 py-8">
+        <section className="mx-auto max-w-[1200px] px-5 sm:px-8 py-8">
           <div className="flex flex-wrap items-center gap-14">
             <div className="mx-auto flex-none">
               <MatchSim />

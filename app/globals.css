@@ -1,24 +1,8 @@
 @import "tailwindcss";
 
-/* ===== Brand + theme tokens (ported from the design mockup) ===== */
-:root,
-[data-theme="dark"] {
-  --bg: #0e0f12;
-  --bg-soft: #121317;
-  --surface: #16171b;
-  --surface-2: #1c1e23;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
-  --text: #f4f4f5;
-  --text-2: #9aa0a8;
-  --muted: #7c828d;
-  --nav: rgba(14, 15, 18, 0.78);
-  --hairline: rgba(255, 255, 255, 0.06);
-  --chip: rgba(255, 255, 255, 0.05);
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
-}
-
-[data-theme="light"] {
+/* ===== Brand + theme tokens (ported from the design mockup) =====
+   El sitio es solo light; las secciones oscuras usan colores propios. */
+:root {
   --bg: #f4f3f0;
   --bg-soft: #eeede8;
   --surface: #ffffff;
@@ -39,6 +23,21 @@
   --river: #e1322a;
   --river-bright: #f0463d;
   --gold: #e6b94e;
+  --gold-dark: #b8882e;
+
+  /* ===== Tokens del juego real (ported de millo/app/globals.css) ===== */
+  /* Metales / rarezas de las cartas — no cambian con el tema */
+  --grad-gold: linear-gradient(135deg, #f2d17a, #e6b94e 45%, #b8882e);
+  --grad-silver: linear-gradient(135deg, #ebeef1, #c9ced4 45%, #8e949c);
+  --grad-bronze: linear-gradient(135deg, #e0a877, #c8824b 45%, #8f5a2e);
+  --grad-platino: linear-gradient(135deg, #eaf3f7, #bcd2dc 45%, #7e98a6);
+  --grad-leyenda: linear-gradient(135deg, #ffe08a, #f3b13a 42%, #e1322a);
+  --grad-game-card: radial-gradient(130% 90% at 80% -10%, #241b13, #121317);
+  /* la carta es siempre "lienzo claro", como en la app (fondo del ficha) */
+  --card-face: linear-gradient(165deg, #ffffff, #f6f5f2);
+  --card-ink: #16171b;
+  --card-ink-2: #565b66;
+  --card-ink-4: #7c828d;
 }
 
 @theme inline {
@@ -56,6 +55,7 @@
   --color-river: var(--river);
   --color-river-bright: var(--river-bright);
   --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
 
   --font-sans: var(--font-barlow);
   --font-display: var(--font-barlow-condensed);
@@ -83,18 +83,11 @@ body {
   color: #fff;
 }
 
-a {
-  color: inherit;
-}
-
-/* Smooth color crossfade on theme switch */
-.theme-transition,
-.theme-transition * {
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease;
+/* En @layer base para que las utilities (text-white, etc.) le ganen en cascada */
+@layer base {
+  a {
+    color: inherit;
+  }
 }
 
 @keyframes milloFloat {
@@ -119,4 +112,70 @@ a {
 
 .animate-float {
   animation: milloFloat 6s ease-in-out infinite;
+}
+
+/* ===== Cartas y cancha del juego (ported de millo/app/globals.css) ===== */
+
+/* Placeholder rayado tipo camiseta (jugadores sin retrato óleo local) */
+.millo-stripes-light {
+  background: repeating-linear-gradient(
+    135deg,
+    #e9e7e3,
+    #e9e7e3 11px,
+    #efedea 11px,
+    #efedea 22px
+  );
+}
+.millo-stripes-dark {
+  background: repeating-linear-gradient(
+    135deg,
+    #1c1e23,
+    #1c1e23 11px,
+    #212429 11px,
+    #212429 22px
+  );
+}
+
+/* Banda roja decorativa (siempre dentro de overflow:hidden, estilo River) */
+.millo-band {
+  position: absolute;
+  background: var(--river);
+  transform: skewX(-20deg);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+/* Entrada suave de una línea del relato del partido */
+@keyframes milloIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-in {
+  animation: milloIn 0.3s ease both;
+}
+
+/* Pop del marcador al convertir un gol */
+@keyframes milloScorePop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-in {
+    animation: none;
+  }
 }

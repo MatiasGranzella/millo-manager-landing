@@ -15,7 +15,7 @@ const pillars: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: Swords,
     title: "Competí",
-    text: "Desafiá a otros hinchas en matches virtuales. Votá, ganá puntos y subí en el ranking.",
+    text: "Jugá la liga partido a partido, ganá monedas y experiencia, y subí de división.",
   },
   {
     icon: Camera,
@@ -28,9 +28,6 @@ export function Pillars() {
   return (
     <section id="pilares" className="mx-auto max-w-[1200px] px-8 pt-[84px] pb-5">
       <div className="max-w-[640px]">
-        <div className="mb-3.5 font-mono text-[11px] tracking-[0.16em] text-river">
-          QUÉ ES MILLO
-        </div>
         <h2 className="m-0 font-display text-[38px] leading-none font-extrabold uppercase text-text sm:text-[46px]">
           Cuatro formas de vivir
           <br />

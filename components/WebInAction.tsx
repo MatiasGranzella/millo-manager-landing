@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { ArrowRight, Check, Lock } from "lucide-react";
+import { MatchSim } from "@/components/game/MatchSim";
 
 const features = [
   "Se sincroniza con tu cuenta de la app",
@@ -12,17 +12,14 @@ export function WebInAction() {
     <section id="web" className="mx-auto max-w-[1200px] px-8 pt-[84px] pb-5">
       <div className="flex flex-wrap items-center gap-14">
         <div className="min-w-[320px] flex-1">
-          <div className="mb-3.5 font-mono text-[11px] tracking-[0.16em] text-river">
-            SIN DESCARGAS
-          </div>
           <h2 className="m-0 font-display text-[38px] leading-none font-extrabold uppercase text-text sm:text-[46px]">
             Vas a jugar desde el
             <br />
             navegador, sin instalar
           </h2>
           <p className="my-[18px] mb-6 max-w-[430px] text-[17px] leading-relaxed text-text-2">
-            La experiencia completa de Millo también en tu compu. Historia,
-            equipos y competencia, sin instalar nada.
+            La experiencia completa de Millo también en tu compu. Viví los
+            partidos en vivo, armá tu XI y competí, sin instalar nada.
           </p>
           <div className="mb-[30px] flex flex-col gap-3">
             {features.map((f) => (
@@ -57,13 +54,9 @@ export function WebInAction() {
                 millomanager.com.ar/jugar
               </span>
             </div>
-            <Image
-              src="/assets/shot-web.svg"
-              alt="Millo Manager en el navegador"
-              width={600}
-              height={380}
-              className="block w-full"
-            />
+            <div className="flex justify-center bg-[#0E0F12] p-6">
+              <MatchSim />
+            </div>
           </div>
         </div>
       </div>

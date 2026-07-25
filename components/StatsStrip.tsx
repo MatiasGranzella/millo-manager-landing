@@ -1,10 +1,11 @@
-const stats = [
-  { value: "+400", label: "ídolos en cartas", accent: false },
-  { value: "7", label: "eras jugables", accent: false },
-  { value: "Pronto", label: "acceso anticipado", accent: true },
-];
-
 export function StatsStrip() {
+  // 466 jugadores con carta en el catálogo completo del juego (repo millo)
+  const stats = [
+    { value: "+460", label: "cartas para coleccionar", accent: false },
+    { value: "8", label: "competiciones", accent: false },
+    { value: "Pronto", label: "acceso anticipado", accent: true },
+  ];
+
   return (
     <div className="border-t border-b border-hairline bg-bg-soft">
       <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-6 px-8 py-[22px]">

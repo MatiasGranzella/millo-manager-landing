@@ -5,6 +5,7 @@ import { Pillars } from "@/components/Pillars";
 import { Cards } from "@/components/Cards";
 import { HowToPlay } from "@/components/HowToPlay";
 import { WebInAction } from "@/components/WebInAction";
+import { Faq } from "@/components/Faq";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
 import { Footer } from "@/components/Footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Cards />
         <HowToPlay />
         <WebInAction />
+        <Faq />
         <WaitlistCTA />
       </main>
       <Footer />

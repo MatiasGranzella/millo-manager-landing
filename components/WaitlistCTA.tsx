@@ -9,11 +9,11 @@ export function WaitlistCTA() {
         <span className="absolute -top-[50px] right-10 h-[480px] w-[22px] skew-x-[-20deg] bg-river opacity-[0.1]" />
         <div className="relative">
           <Image
-            src="/assets/millo-mark-white.svg"
-            alt="Millo"
-            width={46}
-            height={46}
-            className="mx-auto mb-[22px] h-[46px] w-auto object-contain"
+            src="/brand/millo-logo-transparent.png"
+            alt="Millo Manager"
+            width={1024}
+            height={1024}
+            className="mx-auto mb-[22px] h-[80px] w-auto object-contain"
           />
           <h2 className="m-0 font-display text-[44px] leading-[0.92] font-extrabold uppercase sm:text-[60px]">
             Sumate al juego.

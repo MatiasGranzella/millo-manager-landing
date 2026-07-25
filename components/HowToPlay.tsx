@@ -24,19 +24,22 @@ const steps: { n: string; icon: LucideIcon; title: string; text: string }[] = [
 
 export function HowToPlay() {
   return (
-    <section id="como" className="mx-auto max-w-[1200px] px-8 pt-[84px] pb-5">
+    <section
+      id="como"
+      className="mx-auto max-w-[1200px] px-5 pt-16 pb-5 sm:px-8 sm:pt-[84px]"
+    >
       <div className="mx-auto max-w-[620px] text-center">
-        <h2 className="m-0 font-display text-[38px] leading-none font-extrabold uppercase text-text sm:text-[46px]">
+        <h2 className="m-0 font-display text-[32px] leading-[1.02] font-extrabold uppercase text-text sm:text-[46px] sm:leading-none">
           De hincha a campeón
           <br />
           en tres pasos
         </h2>
       </div>
-      <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3">
         {steps.map(({ n, icon: Icon, title, text }) => (
           <div
             key={n}
-            className="rounded-[20px] border border-border-soft bg-surface p-7"
+            className="rounded-[20px] border border-border-soft bg-surface p-5 sm:p-7"
           >
             <div className="mb-4 flex items-center gap-3.5">
               <span className="font-display text-[46px] leading-[0.8] font-extrabold text-river">

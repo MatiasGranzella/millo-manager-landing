@@ -41,7 +41,7 @@ export default function CartasDeRiverPage() {
     <>
       <Nav home={false} />
       <main>
-        <section className="mx-auto max-w-[1200px] px-8 pt-16 pb-6">
+        <section className="mx-auto max-w-[1200px] px-5 sm:px-8 pt-16 pb-6">
           <div className="flex flex-wrap items-center gap-14">
             <div className="min-w-[320px] flex-1">
               <div className="mb-3 font-mono text-[11px] tracking-[0.16em] text-gold">
@@ -73,7 +73,7 @@ export default function CartasDeRiverPage() {
         </section>
 
         {/* rarezas */}
-        <section className="mx-auto max-w-[1200px] px-8 py-14">
+        <section className="mx-auto max-w-[1200px] px-5 sm:px-8 py-14">
           <h2 className="m-0 font-display text-[30px] font-extrabold uppercase text-text">
             Rarezas de las cartas
           </h2>
@@ -93,7 +93,7 @@ export default function CartasDeRiverPage() {
         </section>
 
         {/* showcase */}
-        <section className="mx-auto max-w-[1200px] px-8 py-8">
+        <section className="mx-auto max-w-[1200px] px-5 sm:px-8 py-8">
           <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
             <h2 className="m-0 font-display text-[30px] font-extrabold uppercase text-text">
               Cartas destacadas

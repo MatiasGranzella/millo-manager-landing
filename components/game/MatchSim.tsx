@@ -163,7 +163,11 @@ export function MatchSim({ className = "" }: { className?: string }) {
       </div>
 
       {/* relato */}
-      <div className="relative mt-4 flex h-[150px] flex-col gap-2 overflow-hidden border-t border-white/[0.08] pt-3">
+      {/* Alto fijo para que la card no salte cuando entran eventos, pero
+          dimensionado al relato completo (7 filas en el estado final): con
+          menos, el gol de los 12' quedaba cortado y el marcador 3—1 no
+          coincidía con lo que se leía. */}
+      <div className="relative mt-4 flex h-[190px] flex-col gap-2 overflow-hidden border-t border-white/[0.08] pt-3">
         {feed.map((r, i) => (
           <div key={`${r.min}-${i}`} className="flex items-baseline gap-2.5 animate-in">
             <span className="w-[26px] flex-none text-right font-mono text-[10px] text-gold-dark">

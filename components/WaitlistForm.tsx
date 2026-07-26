@@ -72,7 +72,10 @@ export function WaitlistForm() {
           }}
           aria-label="Tu email"
           aria-invalid={status === "error"}
-          className="h-[52px] flex-1 rounded-[13px] border border-white/15 bg-white/[0.06] px-4 text-[15px] text-white outline-none placeholder:text-[#7C828D] focus:border-river"
+          // `flex-1` solo en la fila horizontal: en mobile el contenedor es
+          // `flex-col` y ahí el flex-basis 0% aplica al alto, le gana al
+          // h-[52px] y el campo queda achatado contra el botón.
+          className="h-[52px] rounded-[13px] border border-white/15 bg-white/[0.06] px-4 text-[15px] text-white outline-none placeholder:text-[#7C828D] focus:border-river sm:flex-1"
         />
         <button
           type="submit"

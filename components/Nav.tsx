@@ -1,11 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swords } from "lucide-react";
+import { NavMenu } from "@/components/NavMenu";
 
 /**
  * Header del sitio. En la home (`home`) los links de sección son anclas locales
  * (#pilares…); en páginas interiores se prefijan con "/" para volver a la home.
  * Los links de Ídolos y Eras son rutas reales (SEO / interlinking).
+ *
+ * La fila de links entra recién en `xl`: con siete ítems necesita ~1030px, así
+ * que abajo de eso se partía en dos líneas y truncaba el logo. Abajo de ese
+ * ancho la navegación vive en `NavMenu`.
  */
 export function Nav({ home = true }: { home?: boolean }) {
   const p = home ? "" : "/";
@@ -16,7 +21,10 @@ export function Nav({ home = true }: { home?: boolean }) {
     { href: `${p}#como`, label: "Cómo se juega" },
     { href: `${p}#faq`, label: "Preguntas" },
   ];
-  const routeLinks = [{ href: "/idolos", label: "Ídolos" }];
+  const routeLinks = [
+    { href: "/idolos", label: "Ídolos" },
+    { href: "/eras", label: "Eras" },
+  ];
 
   return (
     <header className="sticky top-0 z-[60] border-b border-hairline bg-[var(--nav)] backdrop-blur-2xl">
@@ -30,12 +38,14 @@ export function Nav({ home = true }: { home?: boolean }) {
             priority
             className="h-8 w-auto object-contain sm:h-9"
           />
-          <span className="truncate text-[19px] font-extrabold tracking-[-0.01em] text-text sm:text-[21px]">
+          {/* Abajo de 380px el botón de menú deja al wordmark sin lugar y se
+              cortaba en "Millo Man…": ahí queda solo el isotipo. */}
+          <span className="hidden truncate text-[19px] font-extrabold tracking-[-0.01em] text-text min-[380px]:inline sm:text-[21px]">
             Millo <span className="text-river">Manager</span>
           </span>
         </Link>
 
-        <nav className="ml-2 hidden items-center gap-1.5 md:flex">
+        <nav className="ml-2 hidden items-center gap-1.5 xl:flex">
           {sectionLinks.map((l) => (
             <a
               key={l.href}
@@ -65,6 +75,7 @@ export function Nav({ home = true }: { home?: boolean }) {
             <span className="sm:hidden">Sumate</span>
             <span className="hidden sm:inline">Sumate a la lista</span>
           </a>
+          <NavMenu sectionLinks={sectionLinks} routeLinks={routeLinks} />
         </div>
       </div>
     </header>

@@ -125,7 +125,7 @@ export default async function IdoloPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(idol)) }}
       />
 
-      <main className="mx-auto max-w-[1100px] px-5 sm:px-8 pt-10 pb-6">
+      <main className="mx-auto max-w-[1200px] px-5 sm:px-8 pt-10 pb-6">
         {/* breadcrumb */}
         <nav className="mb-6 flex flex-wrap items-center gap-1.5 text-[13px] text-text-2">
           <Link href="/" className="no-underline hover:text-text">Inicio</Link>

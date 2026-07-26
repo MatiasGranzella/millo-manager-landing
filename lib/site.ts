@@ -3,7 +3,14 @@
  * marca, usada por metadata, sitemap, robots, manifest y JSON-LD.
  */
 
-export const SITE_URL = "https://www.millomanager.com.ar";
+/**
+ * Host canónico: el apex, SIN www. Es el que Vercel sirve con 200; `www`
+ * redirige acá con un 307. Si esto apunta a `www`, el canonical, el og:url y
+ * las ~100 URLs del sitemap señalan un host que redirige, Google descarta el
+ * canónico declarado y elige el suyo. Cambiar solo si además se invierte el
+ * redirect en Vercel.
+ */
+export const SITE_URL = "https://millomanager.com.ar";
 export const SITE_NAME = "Millo Manager";
 export const SITE_TAGLINE = "Todo River, siempre";
 export const SITE_DESCRIPTION =

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow, Barlow_Condensed, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import {
   SITE_URL,
@@ -120,6 +121,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
         {children}
+        {/* Vercel Web Analytics. En local carga el script `debug` y loguea los
+            pageviews por consola sin enviarlos; recién en el deploy de Vercel
+            reporta de verdad. Requiere tener Web Analytics habilitado en el
+            proyecto. */}
+        <Analytics />
       </body>
     </html>
   );

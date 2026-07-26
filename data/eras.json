@@ -40,11 +40,19 @@
     "sort_order": 5
   },
   {
+    "slug": "entre-el-descenso-y-la-vuelta",
+    "title": "Entre el descenso y la vuelta",
+    "from_year": 2004,
+    "to_year": 2013,
+    "summary": "Una década de contrastes: los títulos del Clausura 2004 y el Clausura 2008 con una camada de juveniles que se fue al exterior, el descenso de 2011 y la vuelta inmediata como campeón de la B Nacional en 2012.",
+    "sort_order": 6
+  },
+  {
     "slug": "era-gallardo",
     "title": "La era Gallardo",
     "from_year": 2014,
     "to_year": 2026,
     "summary": "El ciclo más exitoso de la historia moderna del club, con la Sudamericana 2014, las Libertadores 2015 y 2018 (esta última ante Boca en Madrid) y múltiples títulos.",
-    "sort_order": 6
+    "sort_order": 7
   }
 ]

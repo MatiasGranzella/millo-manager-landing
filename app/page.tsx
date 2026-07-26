@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { StatsStrip } from "@/components/StatsStrip";
 import { Pillars } from "@/components/Pillars";
 import { Cards } from "@/components/Cards";
+import { GameFeatures } from "@/components/GameFeatures";
 import { HowToPlay } from "@/components/HowToPlay";
 import { WebInAction } from "@/components/WebInAction";
 import { Faq } from "@/components/Faq";
@@ -18,6 +19,7 @@ export default function Home() {
         <StatsStrip />
         <Pillars />
         <Cards />
+        <GameFeatures />
         <HowToPlay />
         <WebInAction />
         <Faq />

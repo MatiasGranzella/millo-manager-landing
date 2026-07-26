@@ -27,11 +27,19 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "¿Qué ídolos puedo conseguir?",
-    a: `Hay ${total} jugadores de River hechos carta, de todas las épocas: de Ángel Labruna y La Máquina a Francescoli, Aimar, Crespo, Quintero, Julián Álvarez y Enzo Fernández. Cada uno con su rating, rareza y atributos reales.`,
+    a: `El juego tiene 552 jugadores de River hechos carta, de todas las épocas: de Ángel Labruna y La Máquina a Francescoli, Aimar, Crespo, Quintero, Julián Álvarez y Enzo Fernández. Cada uno con su rating, su rareza y sus atributos. En este sitio podés ver ${total} de ellos con su retrato al óleo.`,
   },
   {
     q: "¿Cómo se juega?",
-    a: "Armás tu plantel con cartas de ídolos, elegís formación y química, y dirigís los partidos de la liga contra la IA. Vas ganando monedas y experiencia, abrís sobres, sumás cartas y subís de división.",
+    a: "Armás tu plantel con cartas de ídolos, elegís entre 8 formaciones y cuidás la química de cada puesto, y dirigís los partidos contra la IA. Vas ganando monedas y experiencia, abrís sobres, sumás cartas y subís de división.",
+  },
+  {
+    q: "¿Qué tan profundo es el juego?",
+    a: "Bastante más que juntar cartas. Hay 8 competiciones (liga, Copa Argentina, Supercopa, Libertadores, Sudamericana, Recopa y Mundial de Clubes), decisiones que tomás durante el partido —penales, cambios, actitud táctica—, entrenamiento, 10 tipos de lesión con su enfermería, mercado de pases y de DTs, mejoras de infraestructura del club, y una dirigencia que te pone objetivos y te puede echar si no los cumplís.",
+  },
+  {
+    q: "¿Se juega contra otros usuarios?",
+    a: "Por ahora no. Dirigís contra equipos manejados por la IA en las 8 competiciones, y competís con el resto de los DTs en un ranking global por nivel y títulos. El PvP está en la lista de deseos, pero todavía no existe.",
   },
   {
     q: "¿En qué dispositivos funciona?",

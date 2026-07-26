@@ -45,7 +45,7 @@ export default function CartasDeRiverPage() {
           <div className="flex flex-wrap items-center gap-14">
             <div className="min-w-[320px] flex-1">
               <div className="mb-3 font-mono text-[11px] tracking-[0.16em] text-gold">
-                ★ +460 CARTAS DE JUGADORES
+                ★ +550 CARTAS DE JUGADORES
               </div>
               <h1 className="m-0 font-display text-[44px] leading-[0.95] font-extrabold uppercase text-text sm:text-[56px]">
                 Las cartas de

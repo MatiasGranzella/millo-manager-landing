@@ -12,6 +12,7 @@ export function Nav({ home = true }: { home?: boolean }) {
   const sectionLinks = [
     { href: `${p}#pilares`, label: "Qué es" },
     { href: `${p}#cartas`, label: "Cartas" },
+    { href: `${p}#juego`, label: "El juego" },
     { href: `${p}#como`, label: "Cómo se juega" },
     { href: `${p}#faq`, label: "Preguntas" },
   ];

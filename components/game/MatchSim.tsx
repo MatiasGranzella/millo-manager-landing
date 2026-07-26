@@ -129,9 +129,23 @@ export function MatchSim({ className = "" }: { className?: string }) {
       <div className="relative mt-5 flex items-center justify-between gap-3">
         <Crest slug={HOME.slug} name={HOME.name} ring="rgba(230,185,78,.4)" />
         <div className="flex-none whitespace-nowrap text-center font-display text-[52px] font-extrabold leading-[0.9] text-white">
-          <span style={{ color: gf >= ga ? "#fff" : "#9AA0A8" }}>{gf}</span>
+          {/* `key` en el número: al cambiar, React remonta el span y la
+              animación de pop se dispara de nuevo */}
+          <span
+            key={`h${gf}`}
+            className="animate-score-pop inline-block"
+            style={{ color: gf >= ga ? "#fff" : "#9AA0A8" }}
+          >
+            {gf}
+          </span>
           <span className="mx-2 align-middle text-3xl text-[#3a3e47]">—</span>
-          <span style={{ color: ga > gf ? "#fff" : "#9AA0A8" }}>{ga}</span>
+          <span
+            key={`a${ga}`}
+            className="animate-score-pop inline-block"
+            style={{ color: ga > gf ? "#fff" : "#9AA0A8" }}
+          >
+            {ga}
+          </span>
         </div>
         <Crest slug={AWAY.slug} name={AWAY.name} ring="rgba(201,206,212,.28)" />
       </div>

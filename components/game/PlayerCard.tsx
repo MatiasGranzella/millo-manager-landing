@@ -85,14 +85,16 @@ export function PlayerCard({ idol, className = "" }: { idol: Idol; className?: s
             >
               {idol.card.card_position}
             </div>
-            {idol.card.alt_positions && idol.card.alt_positions.length > 0 ? (
-              <div
-                className="font-display text-[11px] font-bold uppercase leading-tight opacity-70"
-                style={{ color: r.colorInk }}
-              >
-                {idol.card.alt_positions.join(" · ")}
-              </div>
-            ) : null}
+            {/* La línea de posiciones alternativas se reserva siempre, aunque
+                el jugador no tenga: si no, las cartas sin alt quedan 14px más
+                bajas y en el carrusel (que las cruza en el mismo lugar) se ve
+                el salto de alto entre rarezas. */}
+            <div
+              className="min-h-[14px] font-display text-[11px] font-bold uppercase leading-tight opacity-70"
+              style={{ color: r.colorInk }}
+            >
+              {idol.card.alt_positions?.join(" · ")}
+            </div>
           </div>
           <span
             className="rounded-[7px] px-2 py-1 font-mono text-[9px] font-bold tracking-[0.06em]"

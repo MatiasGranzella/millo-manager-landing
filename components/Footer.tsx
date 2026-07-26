@@ -5,13 +5,19 @@ import Link from "next/link";
  * Footer del sitio. Igual que el Nav, alterna anclas locales/absolutas según
  * `home`, y suma links a las secciones de Ídolos y Eras (interlinking SEO).
  * La fila de abajo es la legal (privacidad, términos, aclaración de fan site).
+ *
+ * Acá viven los únicos links internos a las landings de SEO
+ * (/cartas-de-river, /manager-de-river, /juego-de-river-plate): estaban en el
+ * sitemap pero ninguna página del sitio apuntaba a ellas.
  */
 export function Footer({ home = true }: { home?: boolean }) {
   const p = home ? "" : "/";
   const links = [
     { href: "/idolos", label: "Ídolos", route: true },
     { href: "/eras", label: "Eras", route: true },
-    { href: `${p}#juego`, label: "El juego", route: false },
+    { href: "/cartas-de-river", label: "Cartas", route: true },
+    { href: "/manager-de-river", label: "Manager", route: true },
+    { href: "/juego-de-river-plate", label: "El juego", route: true },
     { href: `${p}#faq`, label: "Preguntas", route: false },
     { href: `${p}#waitlist`, label: "Lista de espera", route: false },
   ];

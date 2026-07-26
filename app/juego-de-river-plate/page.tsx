@@ -12,7 +12,7 @@ import { absUrl, SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 const idolCount = getAllIdols().length;
 
 export const metadata: Metadata = {
-  title: "Juego de River Plate gratis y online — Millo Manager",
+  title: "Juego de River Plate gratis y online",
   description:
     "El juego de River Plate para jugar gratis y online, sin descargas. Coleccioná las cartas de los ídolos, armá tu XI de todas las épocas y jugá la liga desde el navegador.",
   alternates: { canonical: "/juego-de-river-plate" },

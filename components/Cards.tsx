@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { RarityCarousel } from "@/components/game/RarityCarousel";
-import { getRarityShowcase } from "@/lib/game/players";
+import {
+  getRarityShowcase,
+  IDOL_COUNT as total,
+  IDOL_WITH_PHOTO_COUNT as conRetrato,
+} from "@/lib/game/players";
 import { RARITY, type Rarity } from "@/lib/design/rarity";
 
 const RARITY_TIERS: Rarity[] = ["leyenda", "platino", "oro", "plata", "bronce"];
@@ -10,7 +14,8 @@ export function Cards() {
   const showcase = getRarityShowcase();
 
   // 552 jugadores con carta en el catálogo completo del juego (repo millo,
-  // data/players/lahistoriariver.json) — acá solo viven los 86 curados con arte
+  // data/players/lahistoriariver.json) — acá viven los 86 curados, no todos
+  // con retrato local
   const stats = [
     { value: "+550", label: "cartas", gold: true },
     { value: "6", label: "atributos por carta", gold: false },
@@ -83,8 +88,8 @@ export function Cards() {
               Explorá algunas cartas <ArrowRight size={16} />
             </Link>
             <p className="mt-2 max-w-[430px] text-[12px] leading-[1.5] text-[#7C828D]">
-              En este sitio podés ver 86 ídolos con su retrato al óleo. El resto
-              del catálogo se desbloquea jugando.
+              En este sitio podés ver la ficha de {total} ídolos, {conRetrato} ya
+              con su retrato al óleo. El resto del catálogo se desbloquea jugando.
             </p>
           </div>
         </div>

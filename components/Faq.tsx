@@ -1,12 +1,13 @@
 import { Plus } from "lucide-react";
-import { getAllIdols } from "@/lib/game/players";
+import {
+  IDOL_COUNT as total,
+  IDOL_WITH_PHOTO_COUNT as conRetrato,
+} from "@/lib/game/players";
 
 /**
  * Preguntas frecuentes. Acordeón nativo (<details>) sin JS y con JSON-LD
  * FAQPage generado desde la MISMA fuente de datos (rich results en Google).
  */
-
-const total = getAllIdols().length;
 
 const FAQS: { q: string; a: string }[] = [
   {
@@ -27,7 +28,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "¿Qué ídolos puedo conseguir?",
-    a: `El juego tiene 552 jugadores de River hechos carta, de todas las épocas: de Ángel Labruna y La Máquina a Francescoli, Aimar, Crespo, Quintero, Julián Álvarez y Enzo Fernández. Cada uno con su rating, su rareza y sus atributos. En este sitio podés ver ${total} de ellos con su retrato al óleo.`,
+    a: `El juego tiene 552 jugadores de River hechos carta, de todas las épocas: de Ángel Labruna y La Máquina a Francescoli, Aimar, Crespo, Quintero, Julián Álvarez y Enzo Fernández. Cada uno con su rating, su rareza y sus atributos. En este sitio podés ver la ficha de ${total} de ellos, ${conRetrato} ya con su retrato al óleo.`,
   },
   {
     q: "¿Cómo se juega?",

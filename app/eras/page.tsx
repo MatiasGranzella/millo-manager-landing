@@ -26,7 +26,7 @@ export default function ErasPage() {
   return (
     <>
       <Nav home={false} />
-      <main className="mx-auto max-w-[1100px] px-5 sm:px-8 pt-14 pb-6">
+      <main className="mx-auto max-w-[1200px] px-5 sm:px-8 pt-14 pb-6">
         <div className="mb-2 font-mono text-[11px] tracking-[0.16em] text-gold">
           ★ {yearsOfHistory()} AÑOS DE HISTORIA
         </div>

@@ -2,7 +2,8 @@ import { yearsOfHistory } from "@/lib/site";
 
 export function StatsStrip() {
   // 552 jugadores con carta en el catálogo del juego (repo millo). Acá en la
-  // landing solo viven los 86 curados con retrato al óleo: ver Cards.tsx.
+  // landing viven 86 curados, de los cuales solo una parte tiene retrato local
+  // (IDOL_WITH_PHOTO_COUNT); el resto usa el placeholder rayado.
   const stats = [
     { value: "+550", label: "cartas para coleccionar", accent: false },
     { value: "8", label: "competiciones", accent: false },

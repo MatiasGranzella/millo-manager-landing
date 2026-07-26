@@ -9,6 +9,7 @@
 import playersRaw from "@/data/players.json";
 import palmaresRaw from "@/data/palmares.json";
 import type { Rarity } from "@/lib/design/rarity";
+import { photoUrlFor } from "@/lib/game/photos";
 
 export type StatKey = "rit" | "tir" | "pas" | "reg" | "def" | "fis";
 
@@ -80,47 +81,7 @@ export type Idol = Omit<RawPlayer, "card"> & {
   photoUrl: string | null;
 };
 
-/**
- * Mapa slug → archivo de retrato óleo real en `public/game/players`. Solo 28 de
- * los 86 ídolos tienen retrato local (el arte del juego vive en Supabase); el
- * resto cae al placeholder rayado `.millo-stripes-light`, igual que en la app.
- * Generado desde los archivos copiados de `millo/public/photos/players/_bkp`.
- */
-const PHOTO_FILE: Record<string, string> = {
-  "angel-labruna": "angel-labruna",
-  "amadeo-carrizo": "amadeo-carrizo",
-  "ubaldo-fillol": "ubaldo-fillol",
-  "daniel-passarella": "daniel-passarella",
-  "enzo-francescoli": "enzo-francescoli",
-  "ariel-ortega": "ariel-ortega",
-  "marcelo-gallardo": "marcelo-gallardo",
-  "ramon-diaz": "ramon-diaz",
-  "hernan-crespo": "hernan-crespo",
-  "leonardo-ponzio": "leonardo-ponzio",
-  "franco-armani": "franco-armani",
-  "ignacio-fernandez": "ignacio-fernandez",
-  "marcelo-barovero": "marcelo-barovero",
-  "javier-pinola": "javier-pinola",
-  "jonatan-maidana": "jonatan-maidana",
-  "gonzalo-montiel": "gonzalo-montiel",
-  "enzo-perez": "enzo-perez",
-  "juan-fernando-quintero": "juanfer-quintero",
-  "nicolas-de-la-cruz": "nicolas-de-la-cruz",
-  "rafael-santos-borre": "rafael-santos-borre",
-  "julian-alvarez": "julian-alvarez",
-  "enzo-fernandez": "enzo-fernandez",
-  "jose-manuel-moreno": "jose-manuel-moreno",
-  "roberto-perfumo": "roberto-perfumo",
-  "reinaldo-merlo": "reinaldo-merlo",
-  "pablo-aimar": "pablo-aimar",
-  "javier-saviola": "javier-saviola",
-  "gonzalo-higuain": "gonzalo-higuain",
-};
-
-function photoFor(slug: string): string | null {
-  const file = PHOTO_FILE[slug];
-  return file ? `/game/players/${file}.png` : null;
-}
+// El retrato sale del bucket del juego; ver `lib/game/photos.ts`.
 
 // Índice de palmarés por slug (se arma una vez al cargar el módulo).
 const PALMARES_BY_SLUG = new Map<string, RawPalmares>(
@@ -137,12 +98,20 @@ const IDOLS: Idol[] = (playersRaw as unknown as RawPlayer[])
       total_titulos: pal?.total_titulos ?? 0,
       palmares: pal?.palmares ?? [],
       stints: pal?.stints ?? [],
-      photoUrl: photoFor(p.slug),
+      photoUrl: photoUrlFor(p.slug),
     };
   })
   .sort((a, b) => b.card.rating - a.card.rating || a.display_name.localeCompare(b.display_name, "es"));
 
 const IDOL_BY_SLUG = new Map<string, Idol>(IDOLS.map((i) => [i.slug, i]));
+
+/**
+ * Cuántos ídolos hay y cuántos tienen retrato local. El copy del sitio los usa
+ * en vez de números escritos a mano: no todos tienen arte, y afirmar lo
+ * contrario era falso apenas se miraba la grilla de /idolos.
+ */
+export const IDOL_COUNT = IDOLS.length;
+export const IDOL_WITH_PHOTO_COUNT = IDOLS.filter((i) => i.photoUrl).length;
 
 /** Todos los ídolos con carta (ordenados por rating desc). */
 export function getAllIdols(): Idol[] {

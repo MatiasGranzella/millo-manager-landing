@@ -23,14 +23,21 @@ const LINE_GROUP: Record<Line, PositionGroup> = {
   att: "DEL",
 };
 
-/** Arma un XI real: por cada slot toma el mejor ídolo libre que encaje en su línea. */
+/**
+ * Arma un XI real: por cada slot toma el mejor ídolo libre que encaje en su
+ * línea, prefiriendo a los que tienen retrato. Solo 28 de los 86 ídolos tienen
+ * arte local, así que sin esa preferencia la cancha se llenaba de círculos
+ * vacíos. Hay de sobra con retrato en cada línea, así que el rating del equipo
+ * casi no se mueve; si una línea se queda sin ninguno, cae al mejor igual.
+ */
 function buildLineup(): { slot: string; idol: Idol }[] {
   const pool = [...getAllIdols()]; // ya viene ordenado por rating desc
   const used = new Set<string>();
   const pick = (group: PositionGroup): Idol | undefined => {
-    const found = pool.find(
-      (p) => !used.has(p.slug) && positionGroup(p.card.card_position) === group,
-    );
+    const fits = (p: Idol) =>
+      !used.has(p.slug) && positionGroup(p.card.card_position) === group;
+    const found =
+      pool.find((p) => fits(p) && p.photoUrl) ?? pool.find(fits);
     if (found) used.add(found.slug);
     return found;
   };

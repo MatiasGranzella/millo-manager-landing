@@ -175,9 +175,39 @@ body {
   }
 }
 
+.animate-score-pop {
+  animation: milloScorePop 0.45s ease-out;
+}
+
+/* ===== Reveal al scrollear (ver components/Reveal.tsx) ===== */
+
+/* Ambas clases las pone el cliente: sin JS nunca se oculta nada */
+.millo-reveal {
+  opacity: 0;
+}
+.millo-reveal-in {
+  animation: milloReveal 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes milloReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
-  .animate-in {
+  .animate-in,
+  .animate-score-pop,
+  .millo-reveal-in {
     animation: none;
+  }
+  .millo-reveal {
+    opacity: 1;
   }
 }

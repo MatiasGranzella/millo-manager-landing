@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { CtaBanner } from "@/components/CtaBanner";
 import { getAllEras, eraYears } from "@/lib/game/eras";
 import { getIdolsByEra } from "@/lib/game/players";
-import { absUrl } from "@/lib/site";
+import { absUrl, yearsOfHistory } from "@/lib/site";
 
 const eras = getAllEras();
 
@@ -28,7 +28,7 @@ export default function ErasPage() {
       <Nav home={false} />
       <main className="mx-auto max-w-[1100px] px-5 sm:px-8 pt-14 pb-6">
         <div className="mb-2 font-mono text-[11px] tracking-[0.16em] text-gold">
-          ★ 124 AÑOS DE HISTORIA
+          ★ {yearsOfHistory()} AÑOS DE HISTORIA
         </div>
         <h1 className="m-0 max-w-[760px] font-display text-[40px] leading-[0.98] font-extrabold uppercase text-text sm:text-[52px]">
           La historia de River, por eras

@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absUrl("/juego-de-river-plate"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: absUrl("/cartas-de-river"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: absUrl("/manager-de-river"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: absUrl("/privacidad"), lastModified: now, changeFrequency: "yearly", priority: 0.2 },
+    { url: absUrl("/terminos"), lastModified: now, changeFrequency: "yearly", priority: 0.2 },
   ];
 
   const idolRoutes: MetadataRoute.Sitemap = getAllIdols().map((idol) => ({

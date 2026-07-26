@@ -1,7 +1,10 @@
+import { yearsOfHistory } from "@/lib/site";
+
 export function StatsStrip() {
-  // 466 jugadores con carta en el catálogo completo del juego (repo millo)
+  // 552 jugadores con carta en el catálogo del juego (repo millo). Acá en la
+  // landing solo viven los 86 curados con retrato al óleo: ver Cards.tsx.
   const stats = [
-    { value: "+460", label: "cartas para coleccionar", accent: false },
+    { value: "+550", label: "cartas para coleccionar", accent: false },
     { value: "8", label: "competiciones", accent: false },
     { value: "Pronto", label: "acceso anticipado", accent: true },
   ];
@@ -10,7 +13,7 @@ export function StatsStrip() {
     <div className="border-t border-b border-hairline bg-bg-soft">
       <div className="mx-auto max-w-[1200px] px-5 py-6 sm:px-8 md:flex md:items-center md:justify-between md:gap-6 md:py-[22px]">
         <div className="text-center font-mono text-[10px] tracking-[0.14em] text-muted md:text-left md:text-[11px]">
-          UNA CAPA DE JUEGO SOBRE 124 AÑOS DE HISTORIA
+          UNA CAPA DE JUEGO SOBRE {yearsOfHistory()} AÑOS DE HISTORIA
         </div>
         <div className="mt-4 grid grid-cols-3 gap-3 md:mt-0 md:flex md:items-center md:gap-10">
           {stats.map((s) => (

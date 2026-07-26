@@ -19,9 +19,8 @@ export function Hero() {
             ahora se <span className="text-river">juega</span>.
           </h1>
           <p className="mx-auto my-5 max-w-[480px] text-[16px] leading-relaxed text-text-2 sm:my-6 sm:text-lg lg:mx-0">
-            Revisá cada gloria, coleccioná a los ídolos de todas las épocas y
-            armá tu mejor XI. La app donde ser de River se vive, se comparte y se
-            juega.
+            Coleccioná a los ídolos de todas las épocas, armá tu mejor XI y
+            dirigí a River en la liga y las copas. Gratis, desde el navegador.
           </p>
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center lg:justify-start">
             <a

@@ -2,7 +2,7 @@ import { ArrowRight, Check, Lock } from "lucide-react";
 import { MatchSim } from "@/components/game/MatchSim";
 
 const features = [
-  "Se sincroniza con tu cuenta de la app",
+  "Mismo juego en la compu y en el celular",
   "Armá tu XI con más espacio en pantalla",
   "Gratis, sin tarjeta",
 ];
@@ -54,7 +54,7 @@ export function WebInAction() {
               <span className="h-[11px] w-[11px] rounded-full bg-[#2FA968]" />
               <span className="ml-3.5 inline-flex min-w-0 max-w-[280px] flex-1 items-center gap-[7px] truncate rounded-lg bg-[#1C1E23] px-3 py-1.5 font-mono text-[11px] text-[#7C828D]">
                 <Lock size={12} className="flex-none" />
-                <span className="truncate">millomanager.com.ar/jugar</span>
+                <span className="truncate">app.millomanager.com.ar</span>
               </span>
             </div>
             <div className="flex justify-center bg-[#0E0F12] p-3.5 sm:p-6">

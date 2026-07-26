@@ -9,10 +9,10 @@ const RARITY_TIERS: Rarity[] = ["leyenda", "platino", "oro", "plata", "bronce"];
 export function Cards() {
   const showcase = getRarityShowcase();
 
-  // 466 jugadores con carta en el catálogo completo del juego (repo millo,
+  // 552 jugadores con carta en el catálogo completo del juego (repo millo,
   // data/players/lahistoriariver.json) — acá solo viven los 86 curados con arte
   const stats = [
-    { value: "+460", label: "cartas", gold: true },
+    { value: "+550", label: "cartas", gold: true },
     { value: "6", label: "atributos por carta", gold: false },
     { value: "5", label: "rarezas", gold: false },
   ];
@@ -75,13 +75,17 @@ export function Cards() {
             ))}
           </div>
 
-          <div className="mt-7 flex flex-wrap gap-x-6 gap-y-2 sm:mt-8">
+          <div className="mt-7 sm:mt-8">
             <Link
               href="/idolos"
               className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-gold no-underline transition-colors hover:text-white"
             >
               Explorá algunas cartas <ArrowRight size={16} />
             </Link>
+            <p className="mt-2 max-w-[430px] text-[12px] leading-[1.5] text-[#7C828D]">
+              En este sitio podés ver 86 ídolos con su retrato al óleo. El resto
+              del catálogo se desbloquea jugando.
+            </p>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { ArrowRight, Check, Lock } from "lucide-react";
 import { MatchSim } from "@/components/game/MatchSim";
+import { APP_URL } from "@/lib/site";
 
 const features = [
   "Mismo juego en la compu y en el celular",
@@ -38,11 +39,11 @@ export function WebInAction() {
             ))}
           </div>
           <a
-            href="#waitlist"
+            href={APP_URL}
             className="inline-flex w-full cursor-pointer items-center justify-center gap-[9px] rounded-[13px] bg-river px-[26px] py-[15px] text-base font-bold text-white no-underline shadow-[0_10px_26px_rgba(225,50,42,0.35)] transition-colors hover:bg-river-bright sm:w-auto"
           >
             <ArrowRight size={19} />
-            Quiero el acceso anticipado
+            Jugar ahora
           </a>
         </div>
 
@@ -54,7 +55,9 @@ export function WebInAction() {
               <span className="h-[11px] w-[11px] rounded-full bg-[#2FA968]" />
               <span className="ml-3.5 inline-flex min-w-0 max-w-[280px] flex-1 items-center gap-[7px] truncate rounded-lg bg-[#1C1E23] px-3 py-1.5 font-mono text-[11px] text-[#7C828D]">
                 <Lock size={12} className="flex-none" />
-                <span className="truncate">app.millomanager.com.ar</span>
+                {/* Barra de navegador decorativa: a propósito no muestra la URL
+                    real del juego, que no se publica en el copy del sitio. */}
+                <span className="truncate">millomanager.com.ar</span>
               </span>
             </div>
             <div className="flex justify-center bg-[#0E0F12] p-3.5 sm:p-6">

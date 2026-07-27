@@ -1,13 +1,13 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { APP_URL } from "@/lib/site";
 
 /**
- * CTA compacto para páginas interiores (SEO). Empuja a la lista de espera de la
- * home, donde vive el único formulario real. Reutilizable con copy variable.
+ * CTA compacto para páginas interiores (SEO). Manda directo al juego.
+ * Reutilizable con copy variable.
  */
 export function CtaBanner({
-  title = "Sumate a la lista de espera",
-  subtitle = "Jugá gratis desde el navegador. Sé de los primeros en armar tu XI de leyendas.",
+  title = "Jugá gratis a Millo Manager",
+  subtitle = "Creá tu cuenta y armá tu XI de leyendas. Gratis, desde el navegador.",
 }: {
   title?: string;
   subtitle?: string;
@@ -22,13 +22,13 @@ export function CtaBanner({
         <p className="relative mx-auto mt-3 max-w-[520px] text-[16px] leading-relaxed text-[#c9ced4]">
           {subtitle}
         </p>
-        <Link
-          href="/#waitlist"
+        <a
+          href={APP_URL}
           className="relative mt-6 inline-flex cursor-pointer items-center gap-[9px] rounded-[13px] bg-river px-[26px] py-[15px] text-base font-bold text-white no-underline shadow-[0_10px_26px_rgba(225,50,42,0.35)] transition-colors hover:bg-river-bright"
         >
           <ArrowRight size={19} />
-          Quiero el acceso anticipado
-        </Link>
+          Empezar a jugar
+        </a>
       </div>
     </section>
   );

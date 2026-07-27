@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { APP_URL } from "@/lib/site";
 
 /**
  * Footer del sitio. Igual que el Nav, alterna anclas locales/absolutas según
@@ -13,13 +14,17 @@ import Link from "next/link";
 export function Footer({ home = true }: { home?: boolean }) {
   const p = home ? "" : "/";
   const links = [
+    // Externo al juego en sí: `route: false` lo saca del <Link> de Next, que es
+    // para navegación interna.
+    { href: APP_URL, label: "Jugar", route: false },
+    { href: `${p}#que-es`, label: "Qué es", route: false },
     { href: "/idolos", label: "Ídolos", route: true },
     { href: "/eras", label: "Eras", route: true },
     { href: "/cartas-de-river", label: "Cartas", route: true },
     { href: "/manager-de-river", label: "Manager", route: true },
     { href: "/juego-de-river-plate", label: "El juego", route: true },
     { href: `${p}#faq`, label: "Preguntas", route: false },
-    { href: `${p}#waitlist`, label: "Lista de espera", route: false },
+    { href: `${p}#waitlist`, label: "Novedades", route: false },
   ];
 
   const legalLinks = [

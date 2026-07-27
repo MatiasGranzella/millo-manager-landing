@@ -6,7 +6,7 @@ import { SITE_EMAIL, absUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Términos y condiciones",
   description:
-    "Términos de uso de Millo Manager: un proyecto de fans sin relación oficial con el Club Atlético River Plate, gratuito y en etapa previa al lanzamiento.",
+    "Términos de uso de Millo Manager: un proyecto de fans sin relación oficial con el Club Atlético River Plate, gratuito y en desarrollo activo.",
   alternates: { canonical: "/terminos" },
   openGraph: { url: absUrl("/terminos") },
 };
@@ -46,11 +46,10 @@ export default function TerminosPage() {
         </p>
       </LegalSection>
 
-      <LegalSection heading="Etapa previa al lanzamiento">
+      <LegalSection heading="Juego en desarrollo">
         <p>
-          El juego todavía no está abierto al público: hoy solo podés anotarte en
-          la lista de espera. El acceso es por invitación y no garantizamos ni
-          una fecha de apertura ni que todos los anotados entren.
+          El juego está abierto y se usa en app.millomanager.com.ar: creás tu
+          cuenta con email y contraseña o con tu cuenta de Google, y jugás gratis.
         </p>
         <p>
           Estamos desarrollando activamente. Las funciones, los datos de tu

@@ -33,7 +33,7 @@ export function Pillars() {
     >
       <div className="max-w-[640px]">
         <div className="mb-3.5 font-mono text-[10px] tracking-[0.16em] text-river sm:text-[11px]">
-          ★ QUÉ ES MILLO
+          ★ LOS PILARES DEL JUEGO
         </div>
         <h2 className="m-0 font-display text-[32px] leading-[1.02] font-extrabold uppercase text-text sm:text-[46px] sm:leading-none">
           Cuatro formas de vivir

@@ -48,8 +48,8 @@ export default function TerminosPage() {
 
       <LegalSection heading="Juego en desarrollo">
         <p>
-          El juego está abierto y se usa en app.millomanager.com.ar: creás tu
-          cuenta con email y contraseña o con tu cuenta de Google, y jugás gratis.
+          El juego está abierto: creás tu cuenta con email y contraseña o con tu
+          cuenta de Google, y jugás gratis.
         </p>
         <p>
           Estamos desarrollando activamente. Las funciones, los datos de tu

@@ -5,7 +5,7 @@ import { APP_URL } from "@/lib/site";
 
 /**
  * Hero de la home. El H1 arranca con el nombre exacto de la app ("Millo
- * Manager") a propósito: es el nombre del cliente OAuth en Google Cloud y la
+ * Manager") a propósito: es el nombre del cliente OAuth en Google Cloud y su
  * verificación falla si la home lo muestra distinto. Por lo mismo el párrafo de
  * abajo dice en una frase qué es la app y cómo se entra.
  */
@@ -30,8 +30,8 @@ export function Hero() {
             Millo Manager es un juego de fútbol tipo manager, gratis y sin
             descargas, dedicado a River Plate. Coleccioná a los ídolos de todas
             las épocas, armá tu mejor XI y dirigí a River en la liga y las copas.
-            Se juega desde el navegador y entrás con tu cuenta de Google o con tu
-            email.
+            Se juega desde el navegador y se entra con tu cuenta de Google o con
+            tu email.
           </p>
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center lg:justify-start">
             <a
@@ -39,7 +39,7 @@ export function Hero() {
               className="inline-flex cursor-pointer items-center justify-center gap-[9px] rounded-[13px] bg-river px-7 py-4 text-base font-bold text-white no-underline shadow-[0_10px_26px_rgba(225,50,42,0.4)] transition-colors hover:bg-river-bright"
             >
               <Swords size={19} />
-              Jugar gratis
+              Jugar ahora
             </a>
             <a
               href="#como"

@@ -74,7 +74,7 @@ export function Nav({ home = true }: { home?: boolean }) {
           >
             <Swords size={17} />
             <span className="sm:hidden">Jugar</span>
-            <span className="hidden sm:inline">Jugar gratis</span>
+            <span className="hidden sm:inline">Jugar ahora</span>
           </a>
           <NavMenu sectionLinks={sectionLinks} routeLinks={routeLinks} />
         </div>

@@ -12,20 +12,17 @@
  */
 export const SITE_URL = "https://millomanager.com.ar";
 export const SITE_NAME = "Millo Manager";
-export const SITE_TAGLINE = "Todo River, siempre";
+export const SITE_TAGLINE = "El juego de la historia de River";
 export const SITE_DESCRIPTION =
   "El football manager gratis y sin descargas dedicado a River Plate. Coleccioná las cartas de los ídolos de todas las épocas, armá tu mejor XI y jugá la liga para subir de división.";
 export const SITE_LOCALE = "es_AR";
 
 /**
- * Dónde vive el juego en sí (repo `millo`). La landing es solo la vitrina: el
- * login —con cuenta de Google o email— y la partida pasan acá.
+ * Dónde vive el juego en sí (repo `millo`). La landing es la vitrina: el login
+ * —con cuenta de Google o email— y la partida pasan acá.
  *
- * Google exige, para verificar la pantalla de consentimiento de OAuth, que la
- * home explique qué hace la app y que se llame igual que el cliente OAuth
- * ("Millo Manager"). Por eso el nombre y este link aparecen explícitos en el
- * Hero, en `AboutApp` y en la FAQ: si el revisor no puede llegar al login desde
- * la home, la verificación vuelve rechazada.
+ * Se usa solo como `href` de los botones "Jugar ahora": el subdominio no se
+ * escribe en el copy de ninguna página.
  */
 export const APP_URL = "https://app.millomanager.com.ar";
 

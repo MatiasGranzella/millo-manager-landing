@@ -27,7 +27,7 @@ export function CtaBanner({
           className="relative mt-6 inline-flex cursor-pointer items-center gap-[9px] rounded-[13px] bg-river px-[26px] py-[15px] text-base font-bold text-white no-underline shadow-[0_10px_26px_rgba(225,50,42,0.35)] transition-colors hover:bg-river-bright"
         >
           <ArrowRight size={19} />
-          Empezar a jugar
+          Jugar ahora
         </a>
       </div>
     </section>

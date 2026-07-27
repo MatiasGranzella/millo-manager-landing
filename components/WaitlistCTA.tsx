@@ -23,7 +23,7 @@ export function WaitlistCTA() {
           <h2 className="m-0 font-display text-[38px] leading-[0.94] font-extrabold uppercase sm:text-[60px] sm:leading-[0.92]">
             Sumate al juego.
             <br />
-            <span className="text-river">Todo River, siempre.</span>
+            <span className="text-river">Armá tu XI de leyendas.</span>
           </h2>
           <p className="mx-auto my-5 mb-7 max-w-[480px] text-[16px] leading-relaxed text-[#C9CED4] sm:mb-8 sm:text-lg">
             Tu historia, tu equipo, tu hinchada. Creá tu cuenta gratis y empezá a
@@ -34,7 +34,7 @@ export function WaitlistCTA() {
             className="inline-flex cursor-pointer items-center justify-center gap-[9px] rounded-[13px] bg-river px-8 py-4 text-base font-bold text-white no-underline shadow-[0_10px_26px_rgba(225,50,42,0.4)] transition-colors hover:bg-river-bright"
           >
             <Swords size={19} />
-            Jugar gratis
+            Jugar ahora
           </a>
           <p className="mx-auto mt-9 mb-4 max-w-[440px] text-sm text-[#C9CED4]">
             ¿Preferís que te avisemos de las novedades? Dejanos tu email.

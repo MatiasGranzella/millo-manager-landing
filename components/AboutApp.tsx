@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Gamepad2, LogIn, ShieldCheck } from "lucide-react";
-import { APP_URL } from "@/lib/site";
 
 /**
  * Bloque "Qué es Millo Manager": explica en texto plano qué hace la aplicación,
@@ -13,6 +12,8 @@ import { APP_URL } from "@/lib/site";
  * —igual que el cliente OAuth—, qué datos pide el login con Google y dónde está
  * la política de privacidad. Si se reescribe esta sección, hay que conservar
  * esas cuatro cosas.
+ *
+ * A propósito no nombra la URL del juego: la landing no publica el subdominio.
  */
 export function AboutApp() {
   const bullets = [
@@ -24,7 +25,7 @@ export function AboutApp() {
     {
       icon: LogIn,
       title: "Cómo se entra",
-      text: "El juego vive en app.millomanager.com.ar. Podés crear tu cuenta con email y contraseña o entrar con tu cuenta de Google. Si elegís Google, la app solo recibe tu nombre, tu dirección de email y tu foto de perfil, y los usa únicamente para crear e identificar tu cuenta de DT. No pedimos acceso a Gmail, Drive, contactos ni a ningún otro dato de tu cuenta.",
+      text: "Para jugar necesitás una cuenta: la creás con tu email y una contraseña, o entrás con tu cuenta de Google. Si elegís Google, la aplicación solo recibe tu nombre, tu dirección de email y tu foto de perfil, y los usa únicamente para crear e identificar tu cuenta de DT. No pedimos acceso a Gmail, Drive, contactos ni a ningún otro dato de tu cuenta.",
     },
     {
       icon: ShieldCheck,
@@ -47,15 +48,9 @@ export function AboutApp() {
         </h2>
         <p className="mt-3.5 text-[15px] leading-relaxed text-text-2 sm:mt-[18px] sm:text-[17px]">
           Millo Manager es un juego web gratuito de fútbol manager dedicado a la
-          historia del Club Atlético River Plate. Esta página es el sitio oficial
-          del proyecto; el juego se usa en{" "}
-          <a
-            href={APP_URL}
-            className="font-semibold text-river no-underline hover:underline"
-          >
-            app.millomanager.com.ar
-          </a>
-          .
+          historia del Club Atlético River Plate: se juega desde el navegador,
+          sin descargas y sin costo. Esta página es el sitio oficial del
+          proyecto.
         </p>
       </div>
 

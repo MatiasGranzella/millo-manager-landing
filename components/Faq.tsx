@@ -20,7 +20,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "¿Cómo creo mi cuenta?",
-    a: "Entrás a app.millomanager.com.ar y creás tu cuenta con email y contraseña, o entrás directo con tu cuenta de Google. Si elegís Google, Millo Manager solo recibe tu nombre, tu email y tu foto de perfil, y los usa nada más que para crear e identificar tu cuenta de DT: no accedemos a Gmail, Drive, contactos ni a ningún otro dato de tu cuenta de Google, y no compartimos esa información con terceros.",
+    a: "Con el botón «Jugar ahora» entrás al juego y creás tu cuenta con email y contraseña, o entrás directo con tu cuenta de Google. Si elegís Google, Millo Manager solo recibe tu nombre, tu email y tu foto de perfil, y los usa nada más que para crear e identificar tu cuenta de DT: no accedemos a Gmail, Drive, contactos ni a ningún otro dato de tu cuenta de Google, y no compartimos esa información con terceros.",
   },
   {
     q: "¿Tengo que descargar algo?",
@@ -52,7 +52,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "¿Cuándo puedo jugar?",
-    a: "Ya podés: entrá a app.millomanager.com.ar, creá tu cuenta y empezá a dirigir. El juego está en desarrollo activo, así que seguimos sumando cartas y funciones; dejanos tu email si querés que te avisemos de las novedades.",
+    a: "Ya podés: entrá con el botón «Jugar ahora», creá tu cuenta y empezá a dirigir. El juego está en desarrollo activo, así que seguimos sumando cartas y funciones; dejanos tu email si querés que te avisemos de las novedades.",
   },
 ];
 

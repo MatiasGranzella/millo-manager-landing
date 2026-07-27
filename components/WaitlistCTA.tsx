@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { Swords } from "lucide-react";
 import { WaitlistForm } from "./WaitlistForm";
+import { APP_URL } from "@/lib/site";
 
 export function WaitlistCTA() {
   return (
@@ -24,12 +26,22 @@ export function WaitlistCTA() {
             <span className="text-river">Todo River, siempre.</span>
           </h2>
           <p className="mx-auto my-5 mb-7 max-w-[480px] text-[16px] leading-relaxed text-[#C9CED4] sm:mb-8 sm:text-lg">
-            Tu historia, tu equipo, tu hinchada. Dejanos tu email y sé de los
-            primeros en jugar Millo, gratis, desde el navegador.
+            Tu historia, tu equipo, tu hinchada. Creá tu cuenta gratis y empezá a
+            dirigir a River desde el navegador.
+          </p>
+          <a
+            href={APP_URL}
+            className="inline-flex cursor-pointer items-center justify-center gap-[9px] rounded-[13px] bg-river px-8 py-4 text-base font-bold text-white no-underline shadow-[0_10px_26px_rgba(225,50,42,0.4)] transition-colors hover:bg-river-bright"
+          >
+            <Swords size={19} />
+            Jugar gratis
+          </a>
+          <p className="mx-auto mt-9 mb-4 max-w-[440px] text-sm text-[#C9CED4]">
+            ¿Preferís que te avisemos de las novedades? Dejanos tu email.
           </p>
           <WaitlistForm />
           <p className="mx-auto mt-5 max-w-[440px] text-xs text-[#7C828D]">
-            Sin spam. Solo te escribimos cuando el juego esté listo.
+            Sin spam. Solo te escribimos cuando hay algo nuevo en el juego.
           </p>
         </div>
       </div>

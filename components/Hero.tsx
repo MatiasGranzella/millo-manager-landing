@@ -1,7 +1,14 @@
 import { PlayCircle, Swords } from "lucide-react";
 import { PlayerCard } from "@/components/game/PlayerCard";
 import { getIdolBySlug, getTopIdols } from "@/lib/game/players";
+import { APP_URL } from "@/lib/site";
 
+/**
+ * Hero de la home. El H1 arranca con el nombre exacto de la app ("Millo
+ * Manager") a propósito: es el nombre del cliente OAuth en Google Cloud y la
+ * verificación falla si la home lo muestra distinto. Por lo mismo el párrafo de
+ * abajo dice en una frase qué es la app y cómo se entra.
+ */
 export function Hero() {
   const featured = getIdolBySlug("enzo-francescoli") ?? getTopIdols(1)[0];
 
@@ -14,21 +21,25 @@ export function Hero() {
             ★ EL JUEGO DE LA HISTORIA DE RIVER
           </div>
           <h1 className="m-0 mb-1.5 font-display text-[40px] leading-[1.02] font-extrabold tracking-[-0.01em] uppercase text-text sm:text-[56px] lg:text-[64px] lg:leading-[1.04]">
-            La historia de River,
-            <br />
-            ahora se <span className="text-river">juega</span>.
+            Millo <span className="text-river">Manager</span>
+            <span className="mt-1.5 block text-[24px] leading-[1.1] font-bold text-text-2 sm:mt-2 sm:text-[32px] lg:text-[34px]">
+              La historia de River, ahora se juega.
+            </span>
           </h1>
-          <p className="mx-auto my-5 max-w-[480px] text-[16px] leading-relaxed text-text-2 sm:my-6 sm:text-lg lg:mx-0">
-            Coleccioná a los ídolos de todas las épocas, armá tu mejor XI y
-            dirigí a River en la liga y las copas. Gratis, desde el navegador.
+          <p className="mx-auto my-5 max-w-[520px] text-[16px] leading-relaxed text-text-2 sm:my-6 sm:text-lg lg:mx-0">
+            Millo Manager es un juego de fútbol tipo manager, gratis y sin
+            descargas, dedicado a River Plate. Coleccioná a los ídolos de todas
+            las épocas, armá tu mejor XI y dirigí a River en la liga y las copas.
+            Se juega desde el navegador y entrás con tu cuenta de Google o con tu
+            email.
           </p>
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center lg:justify-start">
             <a
-              href="#waitlist"
+              href={APP_URL}
               className="inline-flex cursor-pointer items-center justify-center gap-[9px] rounded-[13px] bg-river px-7 py-4 text-base font-bold text-white no-underline shadow-[0_10px_26px_rgba(225,50,42,0.4)] transition-colors hover:bg-river-bright"
             >
               <Swords size={19} />
-              Sumate a la lista de espera
+              Jugar gratis
             </a>
             <a
               href="#como"

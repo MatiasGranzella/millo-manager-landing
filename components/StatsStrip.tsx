@@ -7,7 +7,7 @@ export function StatsStrip() {
   const stats = [
     { value: "+550", label: "cartas para coleccionar", accent: false },
     { value: "8", label: "competiciones", accent: false },
-    { value: "Pronto", label: "acceso anticipado", accent: true },
+    { value: "Gratis", label: "y sin descargas", accent: true },
   ];
 
   return (

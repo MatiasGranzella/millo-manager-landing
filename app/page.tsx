@@ -1,6 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { StatsStrip } from "@/components/StatsStrip";
+import { AboutApp } from "@/components/AboutApp";
 import { Pillars } from "@/components/Pillars";
 import { Cards } from "@/components/Cards";
 import { GameFeatures } from "@/components/GameFeatures";
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Hero />
         <StatsStrip />
+        <AboutApp />
         <Pillars />
         <Cards />
         <GameFeatures />

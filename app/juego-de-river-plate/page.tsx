@@ -153,7 +153,7 @@ export default function JuegoDeRiverPage() {
 
       <CtaBanner
         title="Jugá al juego de River"
-        subtitle="Sumate a la lista de espera y sé de los primeros en jugar Millo Manager gratis."
+        subtitle="Creá tu cuenta gratis y empezá a jugar Millo Manager desde el navegador."
       />
       <Footer home={false} />
     </>

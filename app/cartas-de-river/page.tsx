@@ -117,7 +117,7 @@ export default function CartasDeRiverPage() {
 
       <CtaBanner
         title="Empezá tu colección"
-        subtitle="Sumate a la lista de espera y arrancá a juntar las cartas de los ídolos de River."
+        subtitle="Creá tu cuenta gratis y arrancá a juntar las cartas de los ídolos de River."
       />
       <Footer home={false} />
     </>

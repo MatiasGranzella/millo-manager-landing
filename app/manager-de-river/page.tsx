@@ -148,7 +148,7 @@ export default function ManagerDeRiverPage() {
 
       <CtaBanner
         title="Dirigí a River"
-        subtitle="Sumate a la lista de espera y poné el saco de DT en Millo Manager."
+        subtitle="Creá tu cuenta gratis y poné el saco de DT en Millo Manager."
       />
       <Footer home={false} />
     </>

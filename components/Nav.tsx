@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swords } from "lucide-react";
 import { NavMenu } from "@/components/NavMenu";
+import { APP_URL } from "@/lib/site";
 
 /**
  * Header del sitio. En la home (`home`) los links de sección son anclas locales
@@ -15,7 +16,7 @@ import { NavMenu } from "@/components/NavMenu";
 export function Nav({ home = true }: { home?: boolean }) {
   const p = home ? "" : "/";
   const sectionLinks = [
-    { href: `${p}#pilares`, label: "Qué es" },
+    { href: `${p}#que-es`, label: "Qué es" },
     { href: `${p}#cartas`, label: "Cartas" },
     { href: `${p}#juego`, label: "El juego" },
     { href: `${p}#como`, label: "Cómo se juega" },
@@ -68,12 +69,12 @@ export function Nav({ home = true }: { home?: boolean }) {
 
         <div className="ml-auto flex flex-none items-center gap-3">
           <a
-            href={`${p}#waitlist`}
+            href={APP_URL}
             className="inline-flex cursor-pointer items-center gap-[7px] rounded-xl border-none bg-river px-4 py-2.5 text-[13px] font-bold text-white no-underline shadow-[0_6px_16px_rgba(225,50,42,0.32)] transition-colors hover:bg-river-bright sm:px-5 sm:py-3 sm:text-sm"
           >
             <Swords size={17} />
-            <span className="sm:hidden">Sumate</span>
-            <span className="hidden sm:inline">Sumate a la lista</span>
+            <span className="sm:hidden">Jugar</span>
+            <span className="hidden sm:inline">Jugar gratis</span>
           </a>
           <NavMenu sectionLinks={sectionLinks} routeLinks={routeLinks} />
         </div>

@@ -18,6 +18,18 @@ export const SITE_DESCRIPTION =
 export const SITE_LOCALE = "es_AR";
 
 /**
+ * Dónde vive el juego en sí (repo `millo`). La landing es solo la vitrina: el
+ * login —con cuenta de Google o email— y la partida pasan acá.
+ *
+ * Google exige, para verificar la pantalla de consentimiento de OAuth, que la
+ * home explique qué hace la app y que se llame igual que el cliente OAuth
+ * ("Millo Manager"). Por eso el nombre y este link aparecen explícitos en el
+ * Hero, en `AboutApp` y en la FAQ: si el revisor no puede llegar al login desde
+ * la home, la verificación vuelve rechazada.
+ */
+export const APP_URL = "https://app.millomanager.com.ar";
+
+/**
  * Contacto para bajas y pedidos de borrado (lo exige la página de privacidad).
  * TODO: confirmar que esta casilla existe y se lee; hoy es la única vía de
  * contacto publicada en el sitio.
